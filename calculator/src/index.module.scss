@@ -1,0 +1,80 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-height: 600px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    .answer {
+      height: 30%;
+      background: #1e1e1e;
+      width: 100%;
+      border-radius: 6px 6px 0 0;
+      padding: 40px 20px;
+      text-align: right;
+      position: relative;
+      transition: height 0.3s;
+
+      .input {
+        font-size: 40px;
+        color: white;
+        min-height: 2ch;
+      }
+
+      .history {
+        font-size: 28px;
+        color: #ccc;
+        padding: 4px;
+      }
+
+      .showHistory {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        width: 100%;
+        background: transparent;
+        color: #ccc;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+        display: none;
+      }
+
+      &:hover {
+        .showHistory {
+          display: block;
+        }
+      }
+    }
+
+    .controls {
+      height: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 0 0 6px 6px;
+      overflow: hidden;
+      transition: height 0.3s;
+
+      button {
+        outline: none;
+        border: 0;
+        width: 25%;
+        cursor: pointer;
+
+        &:hover {
+          background: #ccc;
+        }
+      }
+    }
+  }
+}
